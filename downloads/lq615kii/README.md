@@ -29,3 +29,9 @@ V2离线测试通过；实际单页完整性及退纸仍待验证。标题应显
 [下载Mac本机PDF工具](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-PDF-Local.zip)
 
 选择本机241×140mm PDF，先预览，确认后逐页USB发送；原尺寸输出，不自动缩小。仅C编码器及独立云端渲染/编码测试已通过，Swift/PDFKit编译、Mac全流程及原尺寸物理边界尚待验证。详情见包内README。本包不含用户业务文件或渲染内容。
+
+## 本机 PDF 工具 V2：比例对照
+
+[下载本机PDF工具V2](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-PDF-Local-v2.zip)
+
+保留默认100%原尺寸，增加需明确选择的85%宽高等比试验；将缩小内容放进较窄的横向范围，用于排查多次原尺寸打印时同位置右侧截断。独立云端渲染/PRN核对通过，V2 Mac比例选项和实机结果仍待验证。包内不含客户PDF、私人照片或设备序列号。

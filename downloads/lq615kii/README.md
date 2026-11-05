@@ -47,3 +47,9 @@ V2离线测试通过；实际单页完整性及退纸仍待验证。标题应显
 [下载本机PDF工具V4](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-PDF-Local-v4.zip)
 
 用户选择默认90%。实际黑色内容在试验打印坐标范围内居中，可选mm微调；超界时拒绝，不自动缩小或裁字。预览明确显示打印区域，纸面精确居中仍需测量校准。独立参考布局/PRN核对通过；新Mac功能与实际位置、退纸待验证。不包含客户文件或私人渲染/照片。
+
+## 本机 PDF V5：90%左右居中、顶部对齐
+
+[下载本机PDF工具V5](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-PDF-Local-v5.zip)
+
+按用户要求只移除额外的上下居中留白，保持90%与已确认合适的横向位置。首次微调保持0,0；左右导纸位置可由用户固定。物理顶边距不能据此消除。独立位图/PRN核对通过，新布局首次纸面效果与退纸仍待验证。无客户业务文件。

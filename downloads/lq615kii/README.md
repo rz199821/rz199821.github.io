@@ -15,3 +15,11 @@
 [下载241×140单张校准包](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-241x140-test.zip)
 
 包含已生成的D4前导PRN，不必重新编译。按新包README直接USB发送；macOS26.3.1已实测拒绝原始队列。带D4前导的旧校准图已有用户报告能出图，新241×140页长与定位仍待实机验证。包内无用户序列号、照片或原始日志。
+
+## 241×140手动单张 V2：缩短校准图
+
+旧241×140图尾部出现跨张续打，暂不推荐继续使用旧校准图。新图保留50mm方框和100mm标尺实际尺寸，将内容高度缩短到101.6mm，为单页进纸定位和尾部夹纸预留更多余量。
+
+[下载V2短图校准包](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-241x140-safe-v2.zip)
+
+V2离线测试通过；实际单页完整性及退纸仍待验证。标题应显示SAFE V2。旧作业残余内容应先按设备手册取消，再使用干净新纸单次测试。

@@ -41,3 +41,9 @@ V2离线测试通过；实际单页完整性及退纸仍待验证。标题应显
 [下载本机PDF工具V3](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-PDF-Local-v3.zip)
 
 独立选择标准较细阈值128或原较深阈值192；保留100%与85%比例选项。比较字重时保持比例一致。参考渲染测试表明黑点减少约2.71%，不保证等同Windows效果；Mac新选项与纸面字重仍待验证。包内不含客户文件或衍生打印数据。
+
+## 本机 PDF V4：默认90%与内容居中
+
+[下载本机PDF工具V4](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-PDF-Local-v4.zip)
+
+用户选择默认90%。实际黑色内容在试验打印坐标范围内居中，可选mm微调；超界时拒绝，不自动缩小或裁字。预览明确显示打印区域，纸面精确居中仍需测量校准。独立参考布局/PRN核对通过；新Mac功能与实际位置、退纸待验证。不包含客户文件或私人渲染/照片。

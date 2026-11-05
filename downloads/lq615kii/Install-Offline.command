@@ -39,7 +39,6 @@ done
 .build/pdf615 render demo-241x140.pdf 1 .build/preflight.pbm - 90 128 ink-center 0 0 > .build/preflight.log
 .build/pbmto615 --d4 --paper=241x140-original < .build/preflight.pbm > .build/preflight.prn
 [ -s .build/preflight.prn ] || fail '转换自检未产生数据。'
-if command -v cupstestppd >/dev/null 2>&1; then cupstestppd LQ615KII-241x140.ppd; fi
 printf '使用此前确认的USB地址登记离线队列；当前不查询设备，也不发送测试页。\n'
 printf '\n接下来需要Mac管理员密码。只安装独立驱动和队列，不改变默认打印机，不发送测试页。\n'
 sudo -v
@@ -48,6 +47,8 @@ printf 'local.lq615kii.systemqueue.v1\n' > .build/OWNER
 sudo -n /usr/bin/install -o root -g wheel -m 644 .build/OWNER "$prefix/OWNER"
 for program in pdf615 pbmto615 lq615filter; do sudo -n /usr/bin/install -o root -g wheel -m 755 ".build/$program" "$prefix/$program"; done
 sudo -n /usr/bin/install -o root -g wheel -m 644 LQ615KII-241x140.ppd "$prefix/LQ615KII-241x140.ppd"
+# Validate absolute filter paths only after the root-owned helpers exist.
+if command -v cupstestppd >/dev/null 2>&1; then cupstestppd LQ615KII-241x140.ppd; fi
 # Exercise the actual installed filter once as this user; do NOT send to USB.
 printf '检查已安装滤镜（只生成文件，不打印）…\n'
 PPD="$prefix/LQ615KII-241x140.ppd" "$prefix/lq615filter" 1 "$USER" Install-Self-Test 1 '' "$bundle/demo-241x140.pdf" > .build/installed-selftest.prn 2> .build/installed-selftest.log || fail "已安装滤镜自检失败，未注册队列。请查看.build/installed-selftest.log；可用Uninstall.command撤销。"

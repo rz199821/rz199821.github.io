@@ -65,3 +65,5 @@ Linux CUPS入口7项集成测试、PPD解析和脚本语法通过；实际Mac队
 系统打印菜单包已更新为0.1.1：修正Apple CUPS头文件在严格POSIX模式下缺少BSD类型与mkdtemp声明的问题；Mac使用_DARWIN_C_SOURCE，Linux保留POSIX。未修改SDK或降低编译/签名校验。修正后Mac编译仍需用户重试。
 
 系统接入包0.1.2增加Install-Offline.command：可用此前实机确认的USB URI先登记离线队列，不查询USB设备、不发送测试页。仍保留编译、签名、自检和注册检查，离线注册不证明实机打印可用。通用脚本不包含任何用户设备序列号。
+
+系统接入包0.1.3修正PPD验证顺序：先复制root所有的签名滤镜，再执行同一个严格cupstestppd检查，最后注册队列。Mac编译/签名已获用户运行证据；修正后的安装和系统后台打印仍待验证。

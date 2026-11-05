@@ -23,3 +23,9 @@
 [下载V2短图校准包](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-241x140-safe-v2.zip)
 
 V2离线测试通过；实际单页完整性及退纸仍待验证。标题应显示SAFE V2。旧作业残余内容应先按设备手册取消，再使用干净新纸单次测试。
+
+## 本机PDF转换：100%原尺寸试验版
+
+[下载Mac本机PDF工具](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-PDF-Local.zip)
+
+选择本机241×140mm PDF，先预览，确认后逐页USB发送；原尺寸输出，不自动缩小。仅C编码器及独立云端渲染/编码测试已通过，Swift/PDFKit编译、Mac全流程及原尺寸物理边界尚待验证。详情见包内README。本包不含用户业务文件或渲染内容。

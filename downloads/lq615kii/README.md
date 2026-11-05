@@ -35,3 +35,9 @@ V2离线测试通过；实际单页完整性及退纸仍待验证。标题应显
 [下载本机PDF工具V2](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-PDF-Local-v2.zip)
 
 保留默认100%原尺寸，增加需明确选择的85%宽高等比试验；将缩小内容放进较窄的横向范围，用于排查多次原尺寸打印时同位置右侧截断。独立云端渲染/PRN核对通过，V2 Mac比例选项和实机结果仍待验证。包内不含客户PDF、私人照片或设备序列号。
+
+## 本机 PDF 工具 V3：文字深浅对照
+
+[下载本机PDF工具V3](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-PDF-Local-v3.zip)
+
+独立选择标准较细阈值128或原较深阈值192；保留100%与85%比例选项。比较字重时保持比例一致。参考渲染测试表明黑点减少约2.71%，不保证等同Windows效果；Mac新选项与纸面字重仍待验证。包内不含客户文件或衍生打印数据。

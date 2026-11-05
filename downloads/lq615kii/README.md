@@ -53,3 +53,11 @@ V2离线测试通过；实际单页完整性及退纸仍待验证。标题应显
 [下载本机PDF工具V5](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-PDF-Local-v5.zip)
 
 按用户要求只移除额外的上下居中留白，保持90%与已确认合适的横向位置。首次微调保持0,0；左右导纸位置可由用户固定。物理顶边距不能据此消除。独立位图/PRN核对通过，新布局首次纸面效果与退纸仍待验证。无客户业务文件。
+
+## 系统打印菜单接入实验包 0.1
+
+[下载系统打印菜单接入包](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-System-Print.zip)
+
+新增独立PPD/PDF滤镜队列，目标是在Mac打开PDF后直接Command+P打印，沿用V5的90%和顶部对齐。首次需管理员安装、连接USB；安装不自动打印，V5保留。应用缩放保持100%，驱动执行90%。
+
+Linux CUPS入口7项集成测试、PPD解析和脚本语法通过；实际Mac队列注册、后台沙箱/PDFKit、系统菜单及USB打印尚待验证。包含卸载说明；不能把该实验包描述为已验证的正式系统驱动。不含客户PDF、衍生打印数据或设备序列号。

@@ -25,6 +25,9 @@ if ! /usr/bin/grep -q '^#define _DARWIN_C_SOURCE 1$' lq615filter.c; then
  /usr/bin/perl -0pi -e 's/\A#define _POSIX_C_SOURCE 200809L\r?\n/#if defined(__APPLE__)\n#define _DARWIN_C_SOURCE 1\n#else\n#define _POSIX_C_SOURCE 200809L\n#endif\n/' lq615filter.c
  /usr/bin/grep -q '^#define _DARWIN_C_SOURCE 1$' lq615filter.c || fail '源码格式不符，未继续安装，请发来错误。'
 fi
+for tool in swiftc clang; do
+ xcrun --find "$tool" >/dev/null 2>&1 || fail '缺少Apple开发工具（Swift/Clang）。请先运行xcode-select --install，或配置已安装的Xcode。'
+done
 mkdir -p .build/module-cache
 printf '正在本机编译PDF转换器与系统打印滤镜…\n'
 xcrun swiftc -O -module-cache-path "$bundle/.build/module-cache" pdf615.swift -o .build/pdf615
@@ -40,6 +43,7 @@ done
 .build/pbmto615 --d4 --paper=241x140-original < .build/preflight.pbm > .build/preflight.prn
 [ -s .build/preflight.prn ] || fail '转换自检未产生数据。'
 printf '使用此前确认的USB地址登记离线队列；当前不查询设备，也不发送测试页。\n'
+[ -n "${uri:-}" ] || fail 'USB地址为空，停止安装；请连接设备重新识别或填写已确认地址。'
 printf '\n接下来需要Mac管理员密码。只安装独立驱动和队列，不改变默认打印机，不发送测试页。\n'
 sudo -v
 sudo -n /usr/bin/install -d -o root -g wheel -m 755 "$prefix"

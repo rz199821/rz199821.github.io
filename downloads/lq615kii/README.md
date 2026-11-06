@@ -1,5 +1,11 @@
 # Epson LQ-615KII 实验测试包
 
+当前推荐：**系统打印菜单安装包0.2**，已在一台macOS26.3.1/arm64、USB直连LQ-615KII上由用户确认成功。其他Mac先读包内START-HERE；Intel和其他系统版本未实测。新电脑本机编译、自动识别自己的USB URI，不能复用他人的设备序列号。
+
+[下载系统打印菜单安装包](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-System-Print.zip)
+
+下文旧版本为历史调试记录，新安装不要逐一重跑旧补丁。
+
 [下载 ZIP](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-test-kit.zip)
 
 包含分析报告、实验滤镜 C 源码、校准样张、离线测试与 macOS 安装/撤销说明，不包含 Epson 原始驱动程序或厂商 DLL/EXE。

@@ -1,8 +1,16 @@
 # Epson LQ-615KII 实验测试包
 
-当前推荐：**系统打印菜单安装包0.2**，已在一台macOS26.3.1/arm64、USB直连LQ-615KII上由用户确认成功。其他Mac先读包内START-HERE；Intel和其他系统版本未实测。新电脑本机编译、自动识别自己的USB URI，不能复用他人的设备序列号。
+当前推荐：**系统打印菜单安装包0.2**，用户已确认macOS26.3.1/arm64和macOS15.7.9/Intel的USB打印成功。新电脑本机编译、自动识别自己的USB URI，不能复用他人的设备序列号。
 
 [下载系统打印菜单安装包](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-System-Print.zip)
+
+## iPhone 接收服务 v2（实机待验证）
+
+[下载 iPhone 接收服务 v2](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-AirPrint-v2.zip)
+
+旧版PDF-only发现服务未能在用户iPhone上显示可选打印机。v2新增实际IPP接收、URF/PWG解码和PDF转换，转交现有Mac队列，保持90%与顶部对齐；一次1页1份。内附官方CUPS源码，无需安装期间再次联网下载。先完成本机编译、URF/PDFKit和只读协议自检，再替换旧发现服务；可卸载恢复。
+
+Linux 29项回环/转换检查通过，最终USB队列与PDFKit使用模拟器；macOS原生编译、iPhone发现/纸型及实机出纸尚需用户验证。不是已认证或已验证的AirPrint产品。解压后运行Install-AirPrint.command，按包内README检查。现有Mac驱动保持不变。
 
 下文旧版本为历史调试记录，新安装不要逐一重跑旧补丁。
 

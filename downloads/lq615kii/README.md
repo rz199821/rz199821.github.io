@@ -73,3 +73,11 @@ Linux CUPS入口7项集成测试、PPD解析和脚本语法通过；实际Mac队
 系统接入包0.1.2增加Install-Offline.command：可用此前实机确认的USB URI先登记离线队列，不查询USB设备、不发送测试页。仍保留编译、签名、自检和注册检查，离线注册不证明实机打印可用。通用脚本不包含任何用户设备序列号。
 
 系统接入包0.1.3修正PPD验证顺序：先复制root所有的签名滤镜，再执行同一个严格cupstestppd检查，最后注册队列。Mac编译/签名已获用户运行证据；修正后的安装和系统后台打印仍待验证。
+
+## iPhone发现桥接试验包
+
+[下载AirPrint发现试验包](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-AirPrint.zip)
+
+复用Mac已验证的CUPS PDF队列与USB驱动，先由用户在系统设置中仅共享该队列，再安装当前用户后台Bonjour公告。发布前检查LAN上的共享/PDF/认证/241×140mm Validate-Job，不创建任务或发送文档。仅公告实际PDF格式和真实队列UUID，未实现URF输入。
+
+8项真实libcups对loopback IPP测试通过；Mac安装/Bonjour/共享权限和iPhone发现、纸型、实际打印均未实测。不是已认证或已验证的AirPrint驱动。手机和Mac需在可信互通LAN，Mac保持登录且不休眠。可卸载辅助服务而保留现有Mac驱动，不含客户文件和网络/设备身份。

@@ -4,15 +4,19 @@
 
 [下载系统打印菜单安装包](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-System-Print.zip)
 
-## iPhone 接收服务 v2.0.2（实机待验证）
+## iPhone 接收服务 v2.0.3（实机待验证）
 
-[下载 iPhone 接收服务 v2.0.2](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-AirPrint-v2.0.2.zip)
+[下载 iPhone 接收服务 v2.0.3](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-AirPrint-v2.0.3.zip)
+
+已有v2且手机选择后卡在“收集打印机信息”的用户：[下载HTTPS小修复包](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-HTTPS-Repair.zip)。保留原Downloads内安装文件夹与.build，解压后运行Repair-TLS.command。它核对原生缓存源码、修正macOS证书查询的重复加锁、重新链接与签名，并在真正HTTPS检查通过后更新本工具的用户后台服务，不打印。Mac原生结果仍需验证。
+
+v2.0.3保留外层凭据互斥保护，移除助手函数对同一非递归锁的重复加锁；安装与检查增加加密IPP验证。Linux31项完整检查通过，其中HTTPS查询使用受信测试证书并验证主机名；Darwin修复仍需Mac实际验证。
 
 v2.0.2在光栅转换器与自检程序中先加载Apple TargetConditionals.h，修复TARGET_OS_OSX未定义导致的严格编译错误；保留-Werror。v2.0.1修复用户macOS编译日志中发现的Darwin TLS调用漏传参数，并确保构建任一步失败后立即停止；未移除TLS或自检。原v2包不推荐继续安装。
 
 旧版PDF-only发现服务未能在用户iPhone上显示可选打印机。v2新增实际IPP接收、URF/PWG解码和PDF转换，转交现有Mac队列，保持90%与顶部对齐；一次1页1份。内附官方CUPS源码，无需安装期间再次联网下载。先完成本机编译、URF/PDFKit和只读协议自检，再替换旧发现服务；可卸载恢复。
 
-Linux 29项回环/转换检查通过，最终USB队列与PDFKit使用模拟器；macOS原生编译、iPhone发现/纸型及实机出纸尚需用户验证。不是已认证或已验证的AirPrint产品。解压后运行Install-AirPrint.command，按包内README检查。现有Mac驱动保持不变。
+Linux 31项回环/转换检查通过，最终USB队列与PDFKit使用模拟器；macOS原生编译、iPhone发现/纸型及实机出纸尚需用户验证。不是已认证或已验证的AirPrint产品。解压后运行Install-AirPrint.command，按包内README检查。现有Mac驱动保持不变。
 
 下文旧版本为历史调试记录，新安装不要逐一重跑旧补丁。
 

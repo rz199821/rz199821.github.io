@@ -1,16 +1,25 @@
 # Epson LQ-615KII 实验测试包
 
+## 给另一台Mac：打印桥接整合包1.0
+
+[下载完整打印桥接整合包](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-Print-Bridge-1.0.zip)
+
+内含Mac USB系统驱动、iPhone接收服务、命令行工具安装入口、检查和卸载工具。解压后保留整个文件夹，打印机通过USB接到新Mac，双击最外层Install.command；已有本项目系统驱动会复用。Darwin TLS参数、Apple头文件顺序和HTTPS凭据锁修复均已合并，不需要重跑旧补丁。内附构建源码与上游许可证，不包含原电脑的设备/网络地址、证书或业务文件。
+
+用户已确认macOS12.2.1/Intel桥接+iOS27.2实际打印正常；Mac本机驱动此前在macOS15.7.9/Intel与macOS26.3.1/Apple Silicon确认成功。整合入口8种安装状态模拟检查通过，桥接核心31项回环/转换检查通过；另一台Mac仍会执行原生编译、签名、URF/PDFKit和HTTPS自检，并需首次单页试打。单页单份、241×140mm，90%/顶部对齐保留。
+
+
 当前推荐：**系统打印菜单安装包0.2**，用户已确认macOS26.3.1/arm64和macOS15.7.9/Intel的USB打印成功。新电脑本机编译、自动识别自己的USB URI，不能复用他人的设备序列号。
 
 [下载系统打印菜单安装包](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-System-Print.zip)
 
-## iPhone 接收服务 v2.0.3（实机待验证）
+## iPhone 接收服务 v2.0.3（核心手机打印已验证）
 
 [下载 iPhone 接收服务 v2.0.3](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-AirPrint-v2.0.3.zip)
 
-已有v2且手机选择后卡在“收集打印机信息”的用户：[下载HTTPS小修复包](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-HTTPS-Repair.zip)。保留原Downloads内安装文件夹与.build，解压后运行Repair-TLS.command。它核对原生缓存源码、修正macOS证书查询的重复加锁、重新链接与签名，并在真正HTTPS检查通过后更新本工具的用户后台服务，不打印。Mac原生结果仍需验证。
+已有v2且手机选择后卡在“收集打印机信息”的用户：[下载HTTPS小修复包](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-HTTPS-Repair.zip)。保留原Downloads内安装文件夹与.build，解压后运行Repair-TLS.command。它核对原生缓存源码、修正macOS证书查询的重复加锁、重新链接与签名，并在真正HTTPS检查通过后更新本工具的用户后台服务，不打印。该修复已获用户实际运行和手机正常出纸确认。
 
-v2.0.3保留外层凭据互斥保护，移除助手函数对同一非递归锁的重复加锁；安装与检查增加加密IPP验证。Linux31项完整检查通过，其中HTTPS查询使用受信测试证书并验证主机名；Darwin修复仍需Mac实际验证。
+v2.0.3保留外层凭据互斥保护，移除助手函数对同一非递归锁的重复加锁；安装与检查增加加密IPP验证。Linux31项完整检查通过，其中HTTPS查询使用受信测试证书并验证主机名；Darwin修复与手机打印已获用户实测确认。
 
 v2.0.2在光栅转换器与自检程序中先加载Apple TargetConditionals.h，修复TARGET_OS_OSX未定义导致的严格编译错误；保留-Werror。v2.0.1修复用户macOS编译日志中发现的Darwin TLS调用漏传参数，并确保构建任一步失败后立即停止；未移除TLS或自检。原v2包不推荐继续安装。
 

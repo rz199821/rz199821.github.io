@@ -4,11 +4,11 @@
 
 [下载系统打印菜单安装包](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-System-Print.zip)
 
-## iPhone 接收服务 v2.0.1（实机待验证）
+## iPhone 接收服务 v2.0.2（实机待验证）
 
-[下载 iPhone 接收服务 v2.0.1](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-AirPrint-v2.0.1.zip)
+[下载 iPhone 接收服务 v2.0.2](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-AirPrint-v2.0.2.zip)
 
-v2.0.1修复用户macOS编译日志中发现的Darwin TLS调用漏传参数，并确保构建任一步失败后立即停止；未移除TLS或自检。原v2包不推荐继续安装。
+v2.0.2在光栅转换器与自检程序中先加载Apple TargetConditionals.h，修复TARGET_OS_OSX未定义导致的严格编译错误；保留-Werror。v2.0.1修复用户macOS编译日志中发现的Darwin TLS调用漏传参数，并确保构建任一步失败后立即停止；未移除TLS或自检。原v2包不推荐继续安装。
 
 旧版PDF-only发现服务未能在用户iPhone上显示可选打印机。v2新增实际IPP接收、URF/PWG解码和PDF转换，转交现有Mac队列，保持90%与顶部对齐；一次1页1份。内附官方CUPS源码，无需安装期间再次联网下载。先完成本机编译、URF/PDFKit和只读协议自检，再替换旧发现服务；可卸载恢复。
 

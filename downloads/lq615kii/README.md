@@ -1,5 +1,14 @@
 # Epson LQ-615KII 实验测试包
 
+## 手机多页更新1.1（2026-11-17）
+
+旧手机桥接只接收单页PDF和光栅。已安装用户：[下载多页更新包](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-Multipage-Update-1.1.zip)，解压后在连接打印机的Mac双击Upgrade-Multipage.command。更新先核对队列空闲、编译/签名，并用真实PDFKit和原系统滤镜生成两页数据自检；不打印。只替换本工具的光栅接收器、提交脚本和选页能力，保留1号/2号名字、USB驱动及HTTPS服务。部署后HTTPS检查失败时尝试恢复。
+
+新Mac请用[完整整合包1.1](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-Print-Bridge-1.1.zip)。支持1至100页和选页范围，每页241×140mm、1份单面、手动逐张放纸。仍会先检查全部选中页，页数多时开始前等待增加；比例90%与顶部对齐不变。
+
+41项真实IPP/HTTPS/多页编解码/选页/失败路径检查与原USB滤镜7项检查通过；测试模拟PDFKit与最终队列，未连接硬件。Mac更新器执行原生两页文件自检后，仍须先试一个两页PDF，确认iPhone发送和实际逐张走纸。旧单页成功记录不等于多页实机已验证。
+
+
 ## 给另一台Mac：打印桥接整合包1.0
 
 [下载完整打印桥接整合包](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-Print-Bridge-1.0.zip)

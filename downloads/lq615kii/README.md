@@ -1,5 +1,15 @@
 # Epson LQ-615KII 实验测试包
 
+## 推荐分享给新用户：Epson LQ-615KII 打印整合包 1.2
+
+在 Mac 上解压，开机并通过 USB 连接打印机，然后双击最外层的 `Install.command`。同一个入口安装 Mac USB 驱动和 iPhone 桥接，也可以升级本项目的旧单页版。如果 macOS 提示安装 Apple 命令行工具，装完后再双击同一个入口。
+
+支持每页 241×140 mm、多页及选页，手动逐张放纸。iPhone 和 Mac 需在同一可互通的 Wi-Fi 上。包内有中文说明和状态检查工具。
+
+安装流程模拟、USB 滤镜、HTTPS 接收和多页转换测试已通过。新 Mac 的安装会执行原生检查，实际走纸请用两页 PDF 确认。
+
+[下载打印整合包 1.2](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-Print-Bridge-1.2.zip)
+
 ## 手机多页更新1.1（2026-11-17）
 
 旧手机桥接只接收单页PDF和光栅。已安装用户：[下载多页更新包](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-Multipage-Update-1.1.zip)，解压后在连接打印机的Mac双击Upgrade-Multipage.command。更新先核对队列空闲、编译/签名，并用真实PDFKit和原系统滤镜生成两页数据自检；不打印。只替换本工具的光栅接收器、提交脚本和选页能力，保留1号/2号名字、USB驱动及HTTPS服务。部署后HTTPS检查失败时尝试恢复。

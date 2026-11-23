@@ -10,6 +10,8 @@
 
 [下载打印整合包 1.2](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-Print-Bridge-1.2.zip)
 
+[图文使用说明 PDF](LQ615KII-Print-Bridge-1.2-Guide.zh-CN.pdf) · [手机长图](LQ615KII-Print-Bridge-1.2-Guide.zh-CN.png)
+
 ## 手机多页更新1.1（2026-11-17）
 
 旧手机桥接只接收单页PDF和光栅。已安装用户：[下载多页更新包](https://raw.githubusercontent.com/rz199821/rz199821.github.io/main/downloads/lq615kii/LQ615KII-Multipage-Update-1.1.zip)，解压后在连接打印机的Mac双击Upgrade-Multipage.command。更新先核对队列空闲、编译/签名，并用真实PDFKit和原系统滤镜生成两页数据自检；不打印。只替换本工具的光栅接收器、提交脚本和选页能力，保留1号/2号名字、USB驱动及HTTPS服务。部署后HTTPS检查失败时尝试恢复。
